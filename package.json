@@ -1,0 +1,41 @@
+{
+  "name": "next",
+  "version": "1.0.0",
+  "description": "静态化处理react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "build": "next build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhouYuTao2017/next-react.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZhouYuTao2017/next-react/issues"
+  },
+  "homepage": "https://github.com/ZhouYuTao2017/next-react#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-loader": "^8.0.6",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.5.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "next": "^9.1.3",
+    "next-routes": "^1.4.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
