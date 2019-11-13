@@ -20,6 +20,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
+  "files": ["server/index.ts"],
   "exclude": [
     "node_modules"
   ],
