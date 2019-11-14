@@ -1,9 +1,14 @@
 {
-	"presets": [ "next/babel",["@babel/preset-env", {
-		"useBuiltIns": "usage",
-		"modules": false
-	}], "@babel/preset-react","@babel/preset-typescript"],
+	"presets": [ "next/babel", "@babel/preset-react","@babel/preset-typescript"],
 	"plugins": [
-	
+		[
+      "react-css-modules",
+      {
+        "webpackHotModuleReloading": true,
+        "generateScopedName": "[local]___[hash:base64:5]",
+        "handleMissingStyleName": "warn",
+        "autoResolveMultipleImports": true
+      }
+    ]
     ]
 }
