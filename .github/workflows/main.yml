@@ -1,4 +1,5 @@
 name: 'Upload artifact'
+on: [push]
 description: 'Publish files as workflow artifacts'
 author: 'GitHub'
 inputs: 
