@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: ZhouYuTao2017/next-react@master
+      uses: actions/checkout@master
 
-    - name: Build and Deploy
-      uses: ZhouYuTao2017/next-react@develop
+    - name: next-react build
+      uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.access_token }}
         BRANCH: gh-pages
