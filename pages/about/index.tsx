@@ -8,6 +8,7 @@ class About extends Component{
 		return(
 			<>	
 				<div styleName='box' {...pages}>about</div>
+				<img src='/static/img/MyHeroCollege.jpg' alt=""/>
 			</>
 		)
 	}
