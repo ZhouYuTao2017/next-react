@@ -1,8 +1,8 @@
-name: GitHub Actions Build and Deploy Demo
+name: next-react build
 on:
   push:
     branches:
-      - master
+      - develop
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
