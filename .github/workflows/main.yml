@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: ZhouYuTao2017/next-react@master
 
     - name: Build and Deploy
       uses: ZhouYuTao2017/next-react@develop
