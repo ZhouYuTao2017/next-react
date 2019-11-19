@@ -9,9 +9,16 @@ module.exports = withPlugins(nextPlugins, {
   distDir: "dist", // 定义构建目录,默认为.next
 
   webpak(config, options) {
-    const { dir, defaultLoaders } = options;
+    const { dir, defaultLoaders, pluginOptions } = options;
     config.module.rules.push({
-      test: /\.(ts|tsx)$/,
+      test: /\.(jsx|tsx)$/,
+      use: {
+        loader: defaultLoaders.babel,
+        options: pluginOptions.options
+      }
+    });
+    config.module.rules.push({
+      test: /\.(tsx)$/,
       enforce: "pre",
       use: [
         {
@@ -24,7 +31,6 @@ module.exports = withPlugins(nextPlugins, {
       include: [dir],
       exclude: /node_modules/
     });
-    config.resolve.alias["@/img"] = path.resolve(__dirname, "/static/img");
     return config;
   }
 });

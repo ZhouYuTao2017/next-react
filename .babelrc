@@ -1,5 +1,13 @@
 {
-	"presets": [ "next/babel", "@babel/preset-react","@babel/preset-typescript"],
+	"presets": [ ["next/babel",{
+    "module-resolver":{
+      "root": ["./"],
+      "extensions":[".ts", ".tsx", "js", "jsx"],
+      "alias": {
+        "@": "./static"
+      }
+    }
+  }], "@babel/preset-react","@babel/preset-typescript"],
 	"plugins": [
 		[
       "react-css-modules",
@@ -9,6 +17,13 @@
         "handleMissingStyleName": "warn",
         "autoResolveMultipleImports": true
       }
-    ]
-    ]
+    ],
+    ["module-resolver",{
+      "root": ["./"],
+      "extensions":[".ts", ".tsx", "js", "jsx"],
+      "alias": {
+        "@": "./static"
+      }
+    }]
+  ]
 }
