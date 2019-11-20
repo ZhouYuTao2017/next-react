@@ -9,14 +9,7 @@ module.exports = withPlugins(nextPlugins, {
   distDir: "dist", // 定义构建目录,默认为.next
 
   webpak(config, options) {
-    const { dir, defaultLoaders, pluginOptions } = options;
-    config.module.rules.push({
-      test: /\.(jsx|tsx)$/,
-      use: {
-        loader: defaultLoaders.babel,
-        options: pluginOptions.options
-      }
-    });
+    const { dir, defaultLoaders } = options;
     config.module.rules.push({
       test: /\.(tsx)$/,
       enforce: "pre",

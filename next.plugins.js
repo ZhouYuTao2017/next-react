@@ -1,5 +1,4 @@
 const withCSS = require("@zeit/next-css");
-const withTypescript = require("@zeit/next-typescript");
 const withImages = require("next-images");
 // next下css配置
 const cssPages = [
@@ -22,4 +21,4 @@ const imagesPage = [
   }
 ];
 //
-module.exports = [cssPages, withTypescript, imagesPage];
+module.exports = [cssPages, imagesPage];
