@@ -11,7 +11,9 @@ class App extends Component {
 					<title>首页</title>
 				</Head>
 				<div>Hello World12</div>
-				<Link href={{pathname:'/about',query:{name:'123'}}}>about</Link>
+				<Link href='/about'>
+					<a target="_parent">about</a>
+				</Link>
 			</>
 		)
 	}

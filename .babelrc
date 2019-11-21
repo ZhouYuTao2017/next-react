@@ -11,10 +11,12 @@
       }
     ],
     ["module-resolver",{
-      "root": ["."],
+      "root": ["./"],
       "extensions":[".ts", ".tsx", "js", "jsx"],
       "alias": {
-        "@": "./public"
+        "@": "./src",
+        "@img":"./public/img",
+        "@svg":"./public/svg"
       }
     }]
   ]
