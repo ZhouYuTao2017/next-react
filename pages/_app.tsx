@@ -1,6 +1,7 @@
 import App from 'next/app'
 import React from 'react'
 import Layout from '../src/components/layout';
+import './_app.css'
 class MyApp extends App {
 	static async getInitialProps({ Component, router, ctx }) {
 		let pageProps = {}
