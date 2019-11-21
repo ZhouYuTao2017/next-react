@@ -22,11 +22,10 @@
   },
   "files": ["server/index.ts"],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ],
   "include": [
     "next-env.d.ts",
-    "types/images.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ]

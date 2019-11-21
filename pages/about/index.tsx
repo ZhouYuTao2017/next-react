@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import Img from '@/img/MyHeroCollege.jpg';
+import Img from '@img/MyHeroCollege.jpg';
+import Clock from '@svg/clock.svg';
 import './index.css';
 class About extends Component{
 	render(){
@@ -8,8 +9,10 @@ class About extends Component{
 		}
 		return(
 			<>	
+				<Clock />
 				<div styleName='box' {...pages}>about</div>
 				<img src={Img} alt=""/>
+				
 			</>
 		)
 	}

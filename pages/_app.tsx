@@ -1,10 +1,9 @@
 import App from 'next/app'
 import React from 'react'
-
+import Layout from '../src/components/layout';
 class MyApp extends App {
 	static async getInitialProps({ Component, router, ctx }) {
 		let pageProps = {}
-
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx)
 		}
@@ -16,7 +15,11 @@ class MyApp extends App {
 
 	render() {
 		const { Component, pageProps } = this.props
-		return <Component { ...pageProps } />
+		return (
+			<Layout>
+				<Component { ...pageProps } />
+			</Layout>
+		)
 	}
 }
 
