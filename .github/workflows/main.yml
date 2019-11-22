@@ -13,7 +13,7 @@ jobs:
     - name: next-react build
       uses: JamesIves/github-pages-deploy-action@master
       env:
-       ACCESS_TOKEN: ${{ secrets.access_token }}
-        BRANCH:"gh-pages"
-        FOLDER: out
+        ACCESS_TOKEN: ${{ secrets.access_token }}
+        BRANCH: gh-pages
+        FOLDER: dist
         BUILD_SCRIPT: npm install && npm run build
