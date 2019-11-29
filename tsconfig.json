@@ -4,6 +4,11 @@
     "module": "esnext",
     "jsx": "preserve",
     "moduleResolution": "node",
+    "paths": {
+      "@*": [
+        "src*"
+      ]
+    },
     "allowJs": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
