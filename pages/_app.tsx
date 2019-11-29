@@ -1,7 +1,8 @@
 import App from 'next/app'
 import React from 'react'
-import Layout from '../src/components/layout';
-import './_app.css'
+import { Provider } from 'mobx-react';
+import Layout from '@/components/layout';
+import './_app.css';
 class MyApp extends App {
 	static async getInitialProps({ Component, router, ctx }) {
 		let pageProps = {}
@@ -10,16 +11,18 @@ class MyApp extends App {
 		}
 		return { pageProps }
 	}
-	constructor(props){
+	constructor(props) {
 		super(props)
 	}
 
 	render() {
 		const { Component, pageProps } = this.props
 		return (
-			<Layout>
-				<Component { ...pageProps } />
-			</Layout>
+			<Provider>
+				<Layout>
+					<Component {...pageProps} />
+				</Layout>
+			</Provider>
 		)
 	}
 }
