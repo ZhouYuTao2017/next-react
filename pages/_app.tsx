@@ -2,6 +2,8 @@ import App from 'next/app'
 import React from 'react'
 import { Provider } from 'mobx-react';
 import Layout from '@/components/layout';
+import States from '@/stores/state';
+import Actions from '@/stores/action';
 import './_app.css';
 class MyApp extends App {
 	static async getInitialProps({ Component, router, ctx }) {
