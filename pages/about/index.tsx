@@ -9,10 +9,11 @@ class About extends Component{
 		}
 		return(
 			<>	
+			<h1>1111</h1>
 				<Clock />
 				<div styleName='box' {...pages}>about</div>
 				<img src={Img} alt=""/>
-				
+
 			</>
 		)
 	}
