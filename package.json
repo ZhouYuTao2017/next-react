@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=staging nodemon",
+    "start": "NODE_ENV=development nodemon",
     "build": "next build && tsc --project tsconfig.server.json && NODE_ENV=production node dist/server/root.js"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/ZhouYuTao2017/next-react#readme",
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
