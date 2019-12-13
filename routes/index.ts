@@ -1,4 +1,21 @@
-import routes from 'next-routes'
-export default new routes()
-.add('about')
-.add('antd')
+export default [
+	{
+		path:'/',
+		page:'index'
+	},
+	{
+		path: '/about',
+		page: 'about'
+	},
+	{
+		path: '/a',
+		page: 'about'
+	},
+	{
+		path: '/antd',
+		page: 'antd'
+	}, {
+		path: '/b',
+		page: 'about'
+	}
+]
