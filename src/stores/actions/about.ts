@@ -7,7 +7,7 @@ class AboutAction{
 
 	@action
 	setUser=()=>{
-
+		this.AboutStore.user='123'
 	}
 }
 export default AboutAction;
