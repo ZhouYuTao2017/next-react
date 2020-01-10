@@ -21,13 +21,14 @@
     }],
     ["import", {
       "libraryName": "antd",
-      "libraryDirectory": "es",
+      "libraryDirectory": "lib",
       "style": "css" // `style: true` 会加载 less 文件
     },"antd"],
     ["import", {
       "libraryName": "antd-mobile",
-      "libraryDirectory": "es",
+      "libraryDirectory": "lib",
       "style": "css" // `style: true` 会加载 less 文件
-    },"antd-mobile"]
+    },"antd-mobile"],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
   ]
 }

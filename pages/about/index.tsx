@@ -1,18 +1,30 @@
 import React,{Component} from 'react';
+import {inject,observer} from 'mobx-react';
 import Img from '@img/MyHeroCollege.jpg';
 import Clock from '@svg/clock.svg';
 import './index.css';
-class About extends Component{
+
+interface Props{
+	user:string;
+	setUser:()=>void;
+}
+@inject((stores:any)=>({
+	user:stores.AboutStore.user,
+	setUser:stores.AboutAction.setUser
+}))
+@observer
+class About extends Component<Props>{
 	render(){
 		const pages={
 			a:1
 		}
 		return(
 			<>	
-				<Clock />
+			<h1>1111</h1>
+				{/* <Clock /> */}
 				<div styleName='box' {...pages}>about</div>
-				<img src={Img} alt=""/>
-				
+				{this.props.user}
+				<button onClick={this.props.setUser}>点击</button>
 			</>
 		)
 	}
