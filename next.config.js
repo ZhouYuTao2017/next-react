@@ -10,7 +10,6 @@ module.exports = withPlugins(nextPlugins, {
   useFileSystemPublicRoutes: false, // 使用自定义路由
 
   webpack(config, options) {
-    console.log(JSON.stringify(config.module.rules));
     const { dir, defaultLoaders } = options;
     // config.module.rules.push({
     //   test: /\.(tsx)$/,
@@ -41,6 +40,13 @@ module.exports = withPlugins(nextPlugins, {
         };
       });
     }
+    config.module.rules.push({
+      test: /\.svg$/,
+      loader: 'svg-sprite-loader',
+      options: {
+        runtimeCompat: true,
+      },
+    });
     return config;
   }
 });

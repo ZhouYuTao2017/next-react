@@ -69,13 +69,13 @@ const imagesPage = [
   withImages,
   {
     inlineImageLimit: 16384,
-    exclude: path.resolve(__dirname, "public/svg")
+    exclude: path.resolve(__dirname, "public/static/svg")
   }
 ];
 const svgPages = [
   withReactSvg,
   {
-    include: path.resolve(__dirname, "public/svg")
+    include: path.resolve(__dirname, "public/static/svg")
   }
 ];
 const withTMPage = [
@@ -85,4 +85,4 @@ const withTMPage = [
   }
 ];
 //
-module.exports = [cssPages, imagesPage, withSize, svgPages, withTMPage];
+module.exports = [cssPages, imagesPage, withSize,  withTMPage];

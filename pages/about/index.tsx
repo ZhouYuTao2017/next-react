@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import {inject,observer} from 'mobx-react';
 import Img from '@img/MyHeroCollege.jpg';
-import Clock from '@svg/clock.svg';
+import clock from '@svg/clock.svg';
 import './index.css';
 
 interface Props{
@@ -21,7 +21,9 @@ class About extends Component<Props>{
 		return(
 			<>	
 			<h1>1111</h1>
-				{/* <Clock /> */}
+				<svg>
+				<use xlinkHref={clock} />
+				</svg>
 				<div styleName='box' {...pages}>about</div>
 				{this.props.user}
 				<button onClick={this.props.setUser}>点击</button>

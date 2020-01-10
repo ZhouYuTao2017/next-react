@@ -15,8 +15,8 @@
       "extensions":[".ts", ".tsx", "js", "jsx"],
       "alias": {
         "@": "./src",
-        "@img":"./public/img",
-        "@svg":"./public/svg"
+        "@img":"./public/static/img",
+        "@svg":"./public/static/svg"
       }
     }],
     ["import", {
