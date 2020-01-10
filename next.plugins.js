@@ -1,7 +1,6 @@
 const withCSS = require("@zeit/next-css");
 const withImages = require("next-images");
 const withSize = require("next-size");
-const withReactSvg = require("next-react-svg");
 const path = require("path");
 const withTM = require("@weco/next-plugin-transpile-modules");
 const { interpolateName } = require("loader-utils");
@@ -70,12 +69,6 @@ const imagesPage = [
   {
     inlineImageLimit: 16384,
     exclude: path.resolve(__dirname, "public/static/svg")
-  }
-];
-const svgPages = [
-  withReactSvg,
-  {
-    include: path.resolve(__dirname, "public/static/svg")
   }
 ];
 const withTMPage = [
