@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=development nodemon",
     "build": "next build",
-    "start:prod":"tsc --project tsconfig.server.json && cross-env NODE_ENV=production PORT=80 node dist/server/index.js"
+    "start:prod":"nodemon"
   },
   "repository": {
     "type": "git",
