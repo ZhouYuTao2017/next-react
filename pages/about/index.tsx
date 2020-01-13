@@ -28,6 +28,7 @@ class About extends Component<Props>{
 				{this.props.user}
 				<button onClick={this.props.setUser}>点击</button>
 				<img src={Img} alt=""/>
+				<div>11111</div>
 			</>
 		)
 	}
