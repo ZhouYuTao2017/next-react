@@ -1,30 +1,25 @@
 import next from 'next';
-import * as URL from 'url';
+import {parse} from 'url';
 import routes from '../routes/index';
+import { createServer } from 'http';
 import http from 'http';
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const app :any= next({ dev })
 
-app.prepare()
-  .then(() => {
-    routes.map((item) => (
-      http.createServer((req, res) => {
-        var params = URL.parse(req.url, true).query;
-        return app.render(req, res, '/' + item.page, params)
-      })
-    ))
-    server.get('*', (req, res) => {
-      return handle(req, res)
-    })
-    server.listen(port, (err) => {
-      if (err) throw err
-      console.log(`> Ready on http://localhost:${port}`)
-    })
-  })
-console.log(
-  `> Server listening at http://localhost:${port} as ${
-  process.env.NODE_ENV
-  }`
-)
+const handle = app.getRequestHandler(app)
+
+app.prepare().then(() => {
+  createServer((req, res) => {
+    const parsedUrl = parse(req.url, true);
+    const { pathname, query } = parsedUrl
+    const route=routes.filter((item)=>item.path===pathname)[0];
+    if(route?.page){
+      app.render(req, res, '/'+route?.page, query)
+    }else{
+      handle(req, res);
+    }
+  }).listen(port,()=>{
+    console.log(`> Ready on http://localhost:${prot}`)
+  });
+});
