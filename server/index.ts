@@ -11,7 +11,18 @@ app.prepare()
   .then(() => {
 		routes.map((item)=>(
 			server.get(item.path, (req, res) => {
-				return app.render(req, res, '/'+item.page, req.query)
+        const query=()=>{
+          if(typeof req.query ==='string'){
+            return req.query
+          }else{
+            let str='';
+            for (var i in req.query){
+              str.length?str+=`?${i}=${req.query[i]}`:str+=`&${i}=${req.query[i]}`
+            }
+          }
+          
+        }
+				return app.render(req, res, '/'+item.page, query())
 			})
 		))
     server.get('*', (req, res) => {
