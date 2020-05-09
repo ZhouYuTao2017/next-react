@@ -20,6 +20,6 @@ app.prepare().then(() => {
       handle(req, res);
     }
   }).listen(port,()=>{
-    console.log(`> Ready on http://localhost:${prot}`)
+    console.log(`> Ready on http://localhost:${port}`)
   });
 });
